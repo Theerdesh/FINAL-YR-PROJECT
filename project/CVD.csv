@@ -1,0 +1,12 @@
+General_Health,Checkup,Exercise,Skin_Cancer,Other_Cancer,Depression,Diabetes,Arthritis,Sex,Age_Category,Height_(cm),Weight_(kg),BMI,Smoking_History,Alcohol_Consumption,Fruit_Consumption,Green_Vegetables_Consumption,FriedPotato_Consumption
+Within the past 5 years,Yes,No,No,No,No,No,No,Male,40-44,175,32.66,33,No,0,30,16,12
+Within the past year,No,Yes,No,No,No,Yes,No,Male,60-64,168,32.66,30.04,Yes,0,30,0,4
+Within the past 2 years,Yes,No,No,No,No,No,No,Female,60-64,178,32.66,22.5,No,4,12,3,16
+Within the past year,No,No,No,No,No,No,No,Male,25-29,185,32.66,26.58,No,0,30,30,8
+Within the past year,Yes,No,No,No,No,No,No,Female,50-54,160,32.66,38.35,No,0,8,4,0
+Within the past year,No,No,No,No,Yes,No,Yes,Female,50-54,165,32.66,30.72,No,0,12,12,12
+Within the past year,Yes,No,No,No,No,No,No,Female,60-64,165,32.66,27.46,No,0,16,8,0
+Within the past year,Yes,No,No,No,No,No,Yes,Male,70-74,188,32.66,34.54,No,3,30,8,8
+Within the past year,Yes,No,No,No,No,No,No,Male,70-74,175,32.66,32.92,No,0,12,12,4
+Within the past year,Yes,No,No,No,No,No,No,Female,70-74,152,32.66,30.18,No,0,12,12,1
+Within the past 5 years,Yes,No,No,No,No,No,No,Male,65-69,173,32.66,31,No,0,30,20,2
