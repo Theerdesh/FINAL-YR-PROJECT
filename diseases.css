@@ -1,0 +1,74 @@
+<<<<<<< HEAD
+/* diseases.css */
+.left-bundle-branch-block,
+.premature-atrial-contraction,
+.premature-ventricular-contraction,
+.right-bundle-branch-block,
+.ventricular-fibrillation {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.precautions h2,
+.curing-procedure h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.precautions ul,
+.curing-procedure ol {
+    margin-left: 20px;
+}
+
+.precautions ul li,
+.curing-procedure ol li {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+
+    .precautions h2,
+    .curing-procedure h2 {
+        font-size: 16px;
+    }
+=======
+/* diseases.css */
+.left-bundle-branch-block,
+.premature-atrial-contraction,
+.premature-ventricular-contraction,
+.right-bundle-branch-block,
+.ventricular-fibrillation {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.precautions h2,
+.curing-procedure h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.precautions ul,
+.curing-procedure ol {
+    margin-left: 20px;
+}
+
+.precautions ul li,
+.curing-procedure ol li {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+
+    .precautions h2,
+    .curing-procedure h2 {
+        font-size: 16px;
+    }
+>>>>>>> 87ca493b5e45bca78b6696c279200ee66d6791b3
+}
