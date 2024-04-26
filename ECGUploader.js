@@ -1,7 +1,10 @@
 // ECGUploader.js
-
 import React, { useState } from 'react';
 import axios from 'axios';
+import LeftBundleBranchBlock from './LeftBundleBranchBlock';
+import VentricularFibrillation from './VentricularFibrillation';
+import PrematureAtrialContraction from './PrematureAtrialContraction';
+import PrematureVentricularContraction from './PrematureVentricularContraction';
 
 const ECGUploader = () => {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -22,10 +25,7 @@ const ECGUploader = () => {
     const handleUpload = async () => {
         try {
             const formData = new FormData();
-            console.log(selectedFile);
             formData.append('image', selectedFile);
-
-            // console.log(formData);
 
             const response = await axios.post('http://localhost:5000/ecgpredict', formData, {
                 headers: {
@@ -33,11 +33,31 @@ const ECGUploader = () => {
                 }
             });
 
-            setPredictedDisease(response.data.ecg_prediction);// ecg_prediction IS NAME OF THE DISEASE
+            setPredictedDisease(response.data.ecg_prediction);
         } catch (error) {
             console.error('Prediction error:', error);
         }
     };
+
+    let renderedComponent = null;
+    if (predictedDisease) {
+        switch (predictedDisease) {
+            case 'Left Bundle Branch Block':
+                renderedComponent = <LeftBundleBranchBlock />;
+                break;
+            case 'Ventricular Fibrillation':
+                renderedComponent = <VentricularFibrillation />;
+                break;
+            case 'Premature Atrial Contraction':
+                renderedComponent = <PrematureAtrialContraction />;
+                break;
+            case 'Premature Ventricular Contraction':
+                renderedComponent = <PrematureVentricularContraction />;
+                break;
+            default:
+                renderedComponent = <div>No specific component for this predicted disease</div>;
+        }
+    }
 
     return (
         <div className="ecg-uploader">
@@ -53,11 +73,11 @@ const ECGUploader = () => {
                 )}
                 <button type="button" onClick={handleUpload}>Upload</button>
             </form>
-            {predictedDisease && (
+            {renderedComponent && (
                 <div>
                     <h2>Predicted Disease:</h2>
                     <p>{predictedDisease}</p>
-                    {predictedDisease === "Left Bundle Branch BLock" && <LeftBundleBranchBLock/>}
+                    {renderedComponent}
                 </div>
             )}
         </div>
